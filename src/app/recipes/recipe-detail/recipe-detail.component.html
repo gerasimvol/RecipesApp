@@ -10,8 +10,8 @@
             <button class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
             <ul class="dropdown-menu">
               <li><a (click)="onAddToShoppingList()">To Shopping list</a></li>
-              <li><a href="#">Edit</a></li>
-              <li><a href="#">Delete</a></li>
+              <li><a [routerLink]="['edit']">Edit</a></li>
+              <li><a >Delete</a></li>
             </ul>
           </div>
         </div>
