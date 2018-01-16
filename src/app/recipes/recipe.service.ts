@@ -30,7 +30,7 @@ export class RecipeService {
   constructor (private shoppingListService: ShoppingListService) {}
 
   getRecipes() {
-    return this.recipes.slice()
+    return this.recipes
   }
 
   getRecipebyId (id: number) {
@@ -39,5 +39,17 @@ export class RecipeService {
 
   addIngredientsToShoppingList (ing: Ingredient[]) {
     this.shoppingListService.addToListMany(ing)
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe)
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe
+  }
+
+  removeRecipe(index: number) {
+    this.recipes.splice(index, 1)
   }
 }
