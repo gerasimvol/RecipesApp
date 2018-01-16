@@ -6,31 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // data
-  showSections = {
-    recipes: true,
-    shopingList: false
-  }
+  loadedFeature = 'recipe';
 
-  // methods
-  switchSection(activeSection: string) {
-    for (const section in this.showSections) {
-      if (this.showSections.hasOwnProperty(section)) {
-        this.showSections[section] = false
-      }
-    }
-    this.showSections[activeSection] = true
-  }
-
-  getActiveTab(): string {
-    let active: string
-    for (const section in this.showSections) {
-      if (this.showSections.hasOwnProperty(section)) {
-        if (this.showSections[section] === true) {
-          active = section
-        }
-      }
-    }
-    return active
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
   }
 }
