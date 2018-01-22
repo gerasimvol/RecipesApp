@@ -33,14 +33,14 @@ import { AuthGuard } from './auth/auth-guard.service';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective,
     RecipeStartComponent,
     RecipeEditComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    DropdownDirective
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
